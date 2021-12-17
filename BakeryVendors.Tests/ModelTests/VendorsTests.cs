@@ -43,26 +43,40 @@ namespace BakeryVendors.Tests
       Vendor newVendor = new Vendor(name, vendorDescription);
     }
 
-      // [TestMethod]
-      // public void GetAll_ReturnsAllVendorObjects_VendorsList()
-      // {
-      //   string name = "Todd's Coffee";
-      //   string vendorDescription = "coffee shop";
+      [TestMethod]
+      public void GetAll_ReturnsAllVendorObjects_VendorsList()
+      {
+        string name = "Todd's Coffee";
+        string vendorDescription = "coffee shop";
 
-      //   string name2 = "Martha's Corner";
-      //   string vendorDescription2 = "specialty market";
+        string name2 = "Martha's Corner";
+        string vendorDescription2 = "specialty market";
 
-      //   Vendor newVendor = new Vendor(name, vendorDescription);
-      //   Vendor newVendor2 = new Vendor(name2, vendorDescription2);
-      //   List<Vendor> newList = new List<Vendor> { newVendor, newVendor2 };
+        Vendor newVendor = new Vendor(name, vendorDescription);
+        Vendor newVendor2 = new Vendor(name2, vendorDescription2);
+        List<Vendor> newList = new List<Vendor> { newVendor, newVendor2 };
 
-      //   List<Vendor> result = Vendor.GetAll();
+        List<Vendor> result = Vendor.GetAll();
 
-      //   CollectionAssert.AreEqual(newList, result);
+        CollectionAssert.AreEqual(newList, result);
+      }
 
+      [TestMethod]
+      public void Find_ReturnsCorrectVendor_Vendor()
+      {
+       string name = "Todd's Coffee";
+        string vendorDescription = "coffee shop";
 
-        
-      // }
+        string name2 = "Martha's Corner";
+        string vendorDescription2 = "specialty market";
+
+        Vendor newVendor = new Vendor(name, vendorDescription);
+        Vendor newVendor2 = new Vendor(name2, vendorDescription2);
+
+        Vendor result = Vendor.Find(2);
+
+        Assert.AreEqual(newVendor2, result); 
+      }
 
     }
   }  
