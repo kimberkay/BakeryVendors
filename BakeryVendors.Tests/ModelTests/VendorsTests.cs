@@ -15,5 +15,20 @@ namespace BakeryVendors.Tests
       Vendor newVendor = new Vendor("test", "test");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
+
+    [TestMethod]
+    public void GetNameAndDescription_ReturnsNameandDescription_NameDescription()
+    {
+      string name = "Todd's Coffee";
+      string vendorDescription = "coffee shop";
+      Vendor newVendor = new Vendor(name, vendorDescription);
+
+      string resultName = newVendor.Name;
+      string resultDesc = newVendor.VendorDescription;
+
+      Assert.AreEqual(name, resultName);
+      Assert.AreEqual(vendorDescription, resultDesc);
+      
+    }
   }  
 }
