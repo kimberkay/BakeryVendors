@@ -6,8 +6,13 @@ using System;
 namespace BakeryVendors.Tests
 {
   [TestClass]
-  public class VendorTests
+  public class VendorTests : IDisposable
   {
+
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
 
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
@@ -37,7 +42,6 @@ namespace BakeryVendors.Tests
       string vendorDescription = "Test Description";
       Vendor newVendor = new Vendor(name, vendorDescription);
     }
-
 
       // [TestMethod]
       // public void GetAll_ReturnsAllVendorObjects_VendorsList()
