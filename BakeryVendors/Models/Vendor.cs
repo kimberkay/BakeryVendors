@@ -40,8 +40,5 @@ namespace BakeryVendors.Models
       Orders.Add(order);
     }
 
-    
-
-  
   }
 }
