@@ -64,7 +64,7 @@ namespace BakeryVendors.Tests
       [TestMethod]
       public void Find_ReturnsCorrectVendor_Vendor()
       {
-       string name = "Todd's Coffee";
+        string name = "Todd's Coffee";
         string vendorDescription = "coffee shop";
 
         string name2 = "Martha's Corner";
@@ -77,6 +77,27 @@ namespace BakeryVendors.Tests
 
         Assert.AreEqual(newVendor2, result); 
       }
+
+      public void AddOrder_PutsOrderWithVendor_OrderList()
+     {
+      string orderTitle = "weekly";
+      string description = "pastries";
+      int price = 50;
+      string date = "1/1/2021";
+
+      Order newOrder = new Order(orderTitle, description, price, date); 
+      List<Order> newList = new List<Order> { newOrder };
+
+      string name = "Todd's Coffee";
+      string vendorDescription = "coffee shop";
+      Vendor newVendor = new Vendor(name, vendorDescription);
+      newVendor.AddOrder(newOrder);
+
+      List<Order> result = newVendor.Orders;
+
+      CollectionAssert.AreEqual(newList, result);
+      
+     }
 
     }
   }  
