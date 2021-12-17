@@ -7,8 +7,13 @@ namespace BakeryVendors.Tests
 {
   
   [TestClass]
-    public class OrderTests
+    public class OrderTests : IDisposable
     {
+      
+      public void Dispose()
+      {
+        Order.ClearAll();
+      }
 
       [TestMethod]
       public void OrderConstructor_CreatesInstancOfOrder_Order()
@@ -57,6 +62,14 @@ namespace BakeryVendors.Tests
         Assert.AreEqual(description, resultDescriptionNew);
         Assert.AreEqual(price, resultPriceNew);
         Assert.AreEqual(date, resultDateNew);
+      }
+
+      [TestMethod]
+      public void GetAll_ReturnsEmptyList_ItemList()
+      {
+        List<Order> newList = new List<Order> {};
+        List<Order> result = Order.GetAll();
+        CollectionAssert.AreEqual(newList, result);
       }
 
 
