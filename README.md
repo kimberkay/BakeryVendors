@@ -2,7 +2,7 @@
 
 #### By: _*Kim Brannian*_
 
-#### _A web application for a baker to track its vendors and their respective orders._
+#### _A web application for a bakery to track their vendors and respective orders._
 
 ## Technologies Used
 * C#
