@@ -1,0 +1,14 @@
+@using BakeryVendors.Models;
+
+<h3>Your Vendors:</h3>
+
+<ol>
+@foreach (Order order in @Model["orders"])
+{
+  <li><a href='/vendors/@Model["vendor"].Id/items/@order.Id'>@order.Description</a></li>
+}
+</ol>
+
+<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new item</a></p>
+<p><a href='/orders'>Return To Vendors List</a></p>
+<p><a href='/'>Return to Main Page</a></p>
