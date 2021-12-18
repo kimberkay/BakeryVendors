@@ -5,7 +5,7 @@ using BakeryVendors.Models;
 
 namespace BakeryVendors.Controllers
 {
-  public class CategoriesController : Controller
+  public class VendorsController : Controller
   {
 
     [HttpGet("/vendors")]

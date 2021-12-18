@@ -1,13 +1,41 @@
-Vendor and Order Tracker
-Pierre was so pleased with your console app for his bakery that he wants to hire you for a new project. This time, he would like you to build him an MVC application to help him track the vendors that purchase baked goods from him and the orders belonging to those vendors.
+# _Bakery Vendors_
 
-For example, Pierre might supply croissants to a vendor called "Suzie's Cafe" once a week. Pierre may want to create a new Vendor to represent the cafe and add new Orders to it to help keep track of his expanding business relationships.
+#### By: _*Kim Brannian*_
 
-Use Razor to display information on each page.
+#### _A web application for a baker to track its vendors and their respective orders._
 
-Create a Vendor class. This class should include properties for the vendor's name, a description of the vendor, a List of Orders belonging to the vendor, and any other properties you would like to include.
-Create an Order class. This class should include properties for the title, the description, the price, the date, and any other properties you would like to include.
-The homepage of the app at the root path (localhost:5000/) should be a splash page welcoming Pierre and providing him with a link to a Vendors page.
-The vendors page should contain a link to a page presenting Pierre with a form he can fill out to create a new Vendor. After the form is submitted, the new Vendor object should be saved into a static List and Pierre should be routed back to the homepage.
-Pierre should be able to click a Vendor's name and go to a new page that will display all of that Vendor's orders.
-Pierre should be provided with a link to a page presenting him with a form to create a new Order for a particular Vendor. Hint: The route for this page might look something like: "/vendors/1/orders/new".
+## Technologies Used
+* C#
+* .NET
+* ASP.NET Core MVC
+* Razor
+* NuGet
+* _git_
+* _GitHub_
+
+## Description
+_A website to track vendors and orders._
+
+## System Requirements
+* Download and install [.NET5](https://dotnet.microsoft.com/en-us/download/dotnet/5.0)
+* A text editor, such as [VS Code](https://code.visualstudio.com/)
+
+## Setup/Installation Requirements
+* Navigate to https://github.com/kimberkay/BakeryVendors.Solution
+* Click on the green "Code" button and copy the repository URL or click on the copy button
+* Open the terminal on your desktop
+* Once in the terminal, use it to navigate to your desktop folder
+* Once inside your desktop folder, use the command `git clone https://github.com/kpundt93/PlacesYouveBeen.Solution.git`
+* After cloning the project, navigate into it using the command `cd BakeryVendors.Solution\`
+* Run the command `dotnet restore` to install project dependencies
+* Run the command `dotnet run` to run the project in the browser
+* If you would like to run the tests for the project, navigate to the `BakeryVendors.Solution\BakerVendors.Tests folder using the command `cd ../BakeryVendors.Tests`
+* Then run the command `dotnet test`
+
+## Known Bugs
+* _New order and new vendor forms do not have all entries available yet._
+
+## License
+_MIT License: https://opensource.org/licenses/MIT_
+
+Copyright (c) _2021_ _Kim Brannian_
