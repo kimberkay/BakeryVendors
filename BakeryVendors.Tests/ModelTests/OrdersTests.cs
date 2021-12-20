@@ -22,8 +22,6 @@ namespace BakeryVendors.Tests
         Assert.AreEqual(typeof(Order), addOrder.GetType());
       }
 
-      //public Order(string orderTitle, string description, int price, string date)
-
       [TestMethod]
       public void GetOrder_ReturnsInstanceOfAnOrder_Order()
       {

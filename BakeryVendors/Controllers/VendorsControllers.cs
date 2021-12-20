@@ -51,7 +51,7 @@ namespace BakeryVendors.Controllers
       foundVendor.AddOrder(newOrder);
       List<Order> vendorOrders = foundVendor.Orders;
       model.Add("orders", vendorOrders);
-      model.Add("vendors", foundVendor);
+      model.Add("vendor", foundVendor);
       return View("Show", model);
     }
 

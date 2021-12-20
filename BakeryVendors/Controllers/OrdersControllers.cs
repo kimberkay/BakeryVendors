@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace BakeryVendors.Controllers
 {
-  public class OrderController : Controller
+  public class OrdersController : Controller
   {
 
     [HttpGet("/vendors/{vendorId}/orders/new")]
@@ -14,12 +14,6 @@ namespace BakeryVendors.Controllers
       return View(vendor);
     }
 
-    [HttpPost("/items/delete")]
-    public ActionResult DeleteAll()
-    {
-      Order.ClearAll();
-      return View();
-    }
 
     [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
     public ActionResult Show(int vendorId, int orderId)
